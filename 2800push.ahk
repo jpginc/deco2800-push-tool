@@ -190,6 +190,11 @@ class Git
    return
   }
   this.__sendCommand("git push")
+  MsgBox, 4, Confirm, Step 8. OMG you pushed....crazy. Do you want to checkout your branch now?
+  IfMsgBox Yes
+  {
+   this.checkoutBranch()
+  }
   return
  }
 }
